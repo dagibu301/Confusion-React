@@ -62,8 +62,13 @@ class DishDetail extends Component{
         </div>
       );
     }
+    else {
+        return (
+            <div></div>
+        );
+    }
   }
 
 }
 
-export default DishDetail
+export default DishDetail;
