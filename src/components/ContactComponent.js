@@ -18,13 +18,10 @@ class Contact extends Component {
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-
-
     handleSubmit(values) {
         console.log('Current State is: ' + JSON.stringify(values));
         alert('Current State is: ' + JSON.stringify(values));
     }
-
 
     render () {
       return(
@@ -88,9 +85,9 @@ class Contact extends Component {
                                 model=".firstname"
                                 show="touched"
                                 messages={{
-                                    required: 'Required',
-                                    minLength: 'Must be greater than 2 characters',
-                                    maxLength: 'Must be 15 characters or less'
+                                    required: 'Required ',
+                                    minLength: 'Must be greater than 2 characters ',
+                                    maxLength: 'Must be 15 characters or less '
                                 }}
                              />
                         </Col>
