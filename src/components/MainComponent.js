@@ -26,15 +26,17 @@ const mapDispatchToProps = dispatch => ({
   fetchDishes: () => { dispatch(fetchDishes())}
 });
 
-componentDidMount() {
-  this.props.fetchDishes();
-}
+
 
 class Main extends Component {
 
   constructor(props) {
     super(props);
 
+  }
+
+  componentDidMount() {
+    this.props.fetchDishes();
   }
 
   render() {
@@ -61,7 +63,7 @@ class Main extends Component {
           />
       );
     };
-    
+
     return (
       <div>
         <Header />

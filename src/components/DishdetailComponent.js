@@ -128,25 +128,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
 
   function RenderComments({comments, addComment, dishId}) {
 
-    if (props.isLoading) {
-        return(
-            <div className="container">
-                <div className="row">
-                    <Loading />
-                </div>
-            </div>
-        );
-    }
-    else if (props.errMess) {
-        return(
-            <div className="container">
-                <div className="row">            
-                    <h4>{props.errMess}</h4>
-                </div>
-            </div>
-        );
-    }
-    else if (props.dish != null) {
+    if (comments != null) {
         const listOfComments = comments.map((comment) => {
             return (
               <ul className="list-unstyled">
@@ -177,7 +159,25 @@ const minLength = (len) => (val) => val && (val.length >= len);
 
 
   const DishDetail = (props) => {
-    if(props.dish != null) {
+    if (props.isLoading) {
+        return(
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if (props.errMess) {
+        return(
+            <div className="container">
+                <div className="row">
+                    <h4>{props.errMess}</h4>
+                </div>
+            </div>
+        );
+    }
+    else if (props.dish != null)  {
       return(
         <div className="container">
           <div className="row">
